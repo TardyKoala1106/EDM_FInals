@@ -6,6 +6,9 @@ create table student (
 username VARCHAR(50) PRIMARY KEY
 );
 
+# OUTPUT:
+<img src="Task2Task1.png">
+
 # Task 2 - Assignment Table
 
 create table assignment (
@@ -13,6 +16,9 @@ shortname VARCHAR(50) PRIMARY KEY,
 due_date DATE NOT NULL,
 url VARCHAR(255)
 );
+
+# OUTPUT:
+<img src="Task2Task2.png">
 
 # Task 3 - Submission Table
 
@@ -26,4 +32,16 @@ FOREIGN KEY (username) REFERENCES student (username),
 FOREIGN KEY (shortname) REFERENCES assignment (shortname)
 );
 
+# OUTPUT:
+<img src="Task2Task3.png">
+
 # Task 4 - Relational Table
+
+# OUTPUT:
+<img src="Relational Table.png">
+
+
+
+
+
+
