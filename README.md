@@ -10,7 +10,7 @@ A student in Information Systems with a keen interest in expanding their program
 - Junior High School: Don Antonio Lee Chi Uan Integrated School
 - Senior High School: Don Antonio Lee Chi Uan Integrated School
 ## My Projects
-- Finals Lab Task 1: MySQL Basics
-- Finals Lab Task 2: Transforming ER Model to Relational Tables
-- Finals Lab Task 3: Table Manipulation
+- Finals Lab Task 1: [MySQL Basics](FinalTask1.md)
+- Finals Lab Task 2: [Transforming ER Model to Relational Tables](FinalTask2.md)
+- Finals Lab Task 3: [Table Manipulation](FinalTask3.md)
 
