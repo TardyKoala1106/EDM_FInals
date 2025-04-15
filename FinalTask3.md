@@ -9,6 +9,9 @@ product_price DECIMAL(10, 2),
 CHECK (product_price > 0)
 );
 
+# OUTPUT:
+<img src="Task3Task1.png">
+
 # Task 2
 
 CHECK (product_price > 0)
@@ -19,6 +22,10 @@ INSERT INTO product_tbl (product_name, product_price)
 VALUES ("Laptop",999.99), ("Smartphone",599.99), 
 ("Tablet",299.99), ("Keyboard",19.99), ("Mouse",14.99),
 ("Desk Lamp",24.99), ("Speakers",9.99);
+
+# OUTPUT:
+
+<img src="Task3Task3.png">
 
 # Task 4 
 
