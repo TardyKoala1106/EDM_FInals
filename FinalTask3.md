@@ -1,4 +1,4 @@
-## Lab Task 3 - TABLE MANIPULAION
+## Lab Task 3 - TABLE MANIPULATION
 
 # Task 1
 
