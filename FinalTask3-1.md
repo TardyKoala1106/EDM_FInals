@@ -2,15 +2,13 @@
 
 # Task 1 
 
-<img src="Task3Task1.png">
-
 SELECT course_name
 FROM courses
 WHERE students_enrolled < enrollment_limit;
 
 # OUTPUT:
 
-<img src="Task3Task1.png">
+<img src="Task3-1Task1.png">
 
 # Task 2
 
@@ -20,7 +18,7 @@ GROUP BY (category);
 
 # OUTPUT:
 
-<img src="Task3Task1.png">
+<img src="Task3-1Task2.png">
 
 # Task 3
 
@@ -30,7 +28,7 @@ WHERE students_enrolled = enrollment_limit;
 
 # OUTPUT:
 
-<img src="Task3Task1.png">
+<img src="Task3-1Task3.png">
 
 # Task 4
 
@@ -38,7 +36,7 @@ SELECT SUM(students_enrolled) FROM courses;
    
 # OUTPUT:
 
-<img src="Task3Task1.png">
+<img src="Task3-1Task4.png">
 
 # Task 5
 
@@ -48,7 +46,7 @@ ORDER BY students_enrolled ASC;
    
 # OUTPUT:
 
-<img src="Task3Task1.png">
+<img src="Task3-1Task5.png">
    
 
 
