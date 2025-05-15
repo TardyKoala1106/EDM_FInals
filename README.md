@@ -14,3 +14,4 @@ A student in Information Systems with a keen interest in expanding their program
 - Finals Lab Task 2: [Transforming ER Model to Relational Tables](FinalTask2.md)
 - Finals Lab Task 3: [Table Manipulation](FinalTask3.md)
 - Finals Lab Task 3-1: [Using MYSQL Clause](FinalTask3-1.md)
+- Finals Lab Task 5: [Using SQL views and Stored Procedures and Stored Functions](FinalTask5.md)
