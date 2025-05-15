@@ -13,6 +13,7 @@ SELECT * FROM products_2002_onwards;
 
 
 # Output:
+<img src="Labtask5-1.png">
 
 # Task 2
 CREATE a VIEW that will display all products whose price range is between 100-150
@@ -26,6 +27,7 @@ SELECT * FROM products_range;
 
 
 # Output:
+<img src="Labtask5-2.png">
 
 # Task 3
 Create a VIEW that will COMPUTE for the (TOTAL_PRICE) of ALL PRODUCTS by getting the (P_ONHAND x P_PRICE) Sold by vendors with the following v_code (21344, 23119 and 24288)
@@ -40,6 +42,7 @@ SELECT * FROM total_price_by_vendors;
 
 
 # Output:
+<img src="Labtask5-3.png">
 
 # Task 4
 CREATE a STORED PROCEDURE that WILL take a SINGLE PARAMETER and UPDATED the Name of Vendor ‘Bryson,Inc. ’ to ‘Bryson and Co’.
@@ -58,6 +61,7 @@ SELECT * FROM vendors;
 
 
 # Output:
+<img src="Labtask5-4.png">
 
 # Task 5
 CREATE A Function that will take 2 parameters(v_code and v_state) and display All the product description and price based on the parameters passed to the function
@@ -78,3 +82,4 @@ CALL GetProdByVendorAndState(21344, 'KY');
 
 
 # Output:
+<img src="Labtask5-5.png">
