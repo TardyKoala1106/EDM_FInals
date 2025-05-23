@@ -28,7 +28,6 @@ db.users.insertMany([
 # Code:
 db.movies.find()
 # Output:
-<img src="Task2Task1.png">
 
 2-2. Get Documents(Quentin)
 # Code: 
@@ -51,11 +50,13 @@ db.movies.find({actors:"Brad Pitt"})
 # Code:
 db.movies.find({year:{$gt:"1990", $lt:"2000"}})
 # Output:
+<img src="Task6-2-90s.png">
 
 2-6. Get Documents(Before 2000s or After 2010s)
 # Code:
 db.movies.find({$or:[{year:{$gt:"2010"}},{year: {$lt:"2000"}}]})
 # Output:
+<img src="Task6-2-2000.png">
 
 ## 3 - UPDATES
 
@@ -63,16 +64,19 @@ db.movies.find({$or:[{year:{$gt:"2010"}},{year: {$lt:"2000"}}]})
 # Code:
 db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})
 # Output:
+<img src="Task6-3-Upd1.png">
 
 3-2.  add a synopsis to "The Hobbit: The Desolation of Smaug"
 # Code:
 db.movies.update({_id:ObjectId("5c9fa42ae5c2dfe9b3729c03")}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})
 # Output:
+<img src="Task6-3-Upd2.png">
 
 3-3.  add an actor named "Samuel L. Jackson" to the movie "Pulp Fiction"
 # Code: 
 db.movies.update({_id:ObjectId("5c9f983ce5c2dfe9b3729bfc")}, {$push:{actors:"Samuel L. Jackson"}})
 # Output:
+<img src="Task6-3-Upd3.png">
 
 ## 4 - TEXT SEARCH
 
@@ -80,11 +84,13 @@ db.movies.update({_id:ObjectId("5c9f983ce5c2dfe9b3729bfc")}, {$push:{actors:"Sam
 # Code:
 db.movies.find({synopsis:{$regex:"Bilbo"}})
 # Output:
+<img src="Task6-4-Bilbo.png">
 
 4-2.  find all movies that have a synopsis that contains the word "Bilbo" and not the word "Gandalf"
 # Code:
 db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}}, {synopsis:{$not:/Gandalf/}}]})
 # Output:
+<img src="Task6-4-Not.png">
 
 ## 5 - DELETE
 
@@ -92,11 +98,15 @@ db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}}, {synopsis:{$not:/Gandalf/}}]}
 # Code:
 db.movies.remove({_id:ObjectId("5c9f992ae5c2dfe9b3729c00")})
 # Output:
+<img src="Task6-5-Del1.png">
+
 
 5-2: delete the movie "Avatar"
 # Code:
 db.movies.remove({_id:ObjectId("5c9f9936e5c2dfe9b3729c01")})
 # Output:
+<img src="Task6-5-Del2.png">
+
 
 ## 6 - RELATIONSHIPS
 
@@ -135,36 +145,45 @@ db.comments.insertMany([
 # Code:
 db.users.find().pretty()
 # Output:
+<img src="Task6-6-1.png">
 
 7-2. find all posts
 # Code:
 db.posts.find().pretty()
 # Output:
+<img src="Task6-6-2.png">
 
 7-3. find all posts that was authored by "GoodGuyGreg"
 # Code:
 db.posts.find({username:"GoodGuyGreg"})
 # Output:
+<img src="Task6-6-3.png">
 
 7-4. find all posts that was authored by "ScumbagSteve"
 # Code:
 db.posts.find({username:"ScumbagSteve"})
 # Output:
+<img src="Task6-6-4.png">
 
 7-5. find all comments
 # Code:
 db.comments.find().pretty()
 # Output:
+<img src="Task6-6-5.png">
 
 7-6. find all comments that was authored by "GoodGuyGreg"
 # Code:
 db.comments.find({username:"GoodGuyGreg"})
 # Output:
+<img src="Task6-6-6.png">
+
 
 7-7. find all comments that was authored by "ScumbagSteve"
 # Code:
 db.comments.find({username:"ScumbagSteve"})
 # Output:
+<img src="Task6-6-7.png">
+
 
 
 
