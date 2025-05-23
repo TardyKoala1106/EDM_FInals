@@ -28,6 +28,7 @@ db.users.insertMany([
 # Code:
 db.movies.find()
 # Output:
+<img src="Task6-2.png">
 
 2-2. Get Documents(Quentin)
 # Code: 
