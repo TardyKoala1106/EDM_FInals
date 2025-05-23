@@ -43,6 +43,7 @@ db.movies.find({actors:"Brad Pitt"})
 
 2-4. Get Documents(The Hobbit)
 # Code:
+db.movies.find({franchise:"The Hobbit"})
 # Output:
 <img src="Task6-2-Hobbit.png">
 
