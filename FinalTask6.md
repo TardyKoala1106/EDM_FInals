@@ -20,6 +20,7 @@ db.users.insertMany([
   {_id: 2, username: "ScumbagSteve", fullname: {first: "Scumbag", last: "Steve"}}
 ]);
 # Output:
+<img src="Task6-1.png">
 
 ## 2 - FINDS
 
@@ -27,20 +28,24 @@ db.users.insertMany([
 # Code:
 db.movies.find()
 # Output:
+<img src="Task2Task1.png">
 
 2-2. Get Documents(Quentin)
 # Code: 
 db.movies.find({writer:"Quentin Tarantino"})
 # Output:
+<img src="Task6-2-Quentin - Copy.png">
 
 2-3. Get Documents(Brad)
 # Code:
 db.movies.find({actors:"Brad Pitt"})
 # Output:
+<img src="Task6-2-Brad.png">
 
 2-4. Get Documents(The Hobbit)
 # Code:
 # Output:
+<img src="Task6-2-Hobbit.png">
 
 2-5. Get Documents(90s)
 # Code:
