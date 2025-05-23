@@ -80,3 +80,87 @@ db.movies.find({synopsis:{$regex:"Bilbo"}})
 # Code:
 db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}}, {synopsis:{$not:/Gandalf/}}]})
 # Output:
+
+## 5 - DELETE
+
+5-1. delete the movie "Pee Wee Herman's Big Adventure"
+# Code:
+db.movies.remove({_id:ObjectId("5c9f992ae5c2dfe9b3729c00")})
+# Output:
+
+5-2: delete the movie "Avatar"
+# Code:
+db.movies.remove({_id:ObjectId("5c9f9936e5c2dfe9b3729c01")})
+# Output:
+
+## 6 - RELATIONSHIPS
+
+6-1. Users Collection
+# Code:
+db.users.insertMany([
+  {_id: 1, username: "GoodGuyGreg", first_name: "Good Guy", last_name: "Greg"},
+  {_id: 2, username: "ScumbagSteve", fullname: {first: "Scumbag", last: "Steve"}}
+]);
+
+
+6-2. Posts Collection
+# Code:
+db.posts.insertMany([
+  {username: "GoodGuyGreg", title: "Passes out at Party", body: "Raises your credit score"},
+  {username: "GoodGuyGreg", title: "Steals your identity", body: "Raises your credit score"},
+  {username: "GoodGuyGreg", title: "Reports a bug in your code", body: "Sends you a pull request"},
+  {username: "ScumbagSteve", title: "Borrows something", body: "Sells it"},
+  {username: "ScumbagSteve", title: "Borrows everything", body: "The end"},
+  {username: "ScumbagSteve", title: "Forks your repo on github", body: "Sets to private"}
+]);
+
+6-3 Comments Collection
+# Code:
+db.comments.insertMany([
+  {username: "GoodGuyGreg", comment: "Hope you got a good deal!", post: ObjectId("POST_ID_1")},
+  {username: "GoodGuyGreg", comment: "What's mine is yours!", post: ObjectId("POST_ID_2")},
+  {username: "GoodGuyGreg", comment: "Don't violate the licensing agreement!", post: ObjectId("POST_ID_3")},
+  {username: "ScumbagSteve", comment: "It still isn't clean", post: ObjectId("POST_ID_4")},
+  {username: "ScumbagSteve", comment: "Denied your PR cause I found a hack", post: ObjectId("POST_ID_5")}
+]);
+
+## 7 - QUERY RELATED  COLLECTIONS
+
+7-1. find all users
+# Code:
+db.users.find().pretty()
+# Output:
+
+7-2. find all posts
+# Code:
+db.posts.find().pretty()
+# Output:
+
+7-3. find all posts that was authored by "GoodGuyGreg"
+# Code:
+db.posts.find({username:"GoodGuyGreg"})
+# Output:
+
+7-4. find all posts that was authored by "ScumbagSteve"
+# Code:
+db.posts.find({username:"ScumbagSteve"})
+# Output:
+
+7-5. find all comments
+# Code:
+db.comments.find().pretty()
+# Output:
+
+7-6. find all comments that was authored by "GoodGuyGreg"
+# Code:
+db.comments.find({username:"GoodGuyGreg"})
+# Output:
+
+7-7. find all comments that was authored by "ScumbagSteve"
+# Code:
+db.comments.find({username:"ScumbagSteve"})
+# Output:
+
+
+
+
